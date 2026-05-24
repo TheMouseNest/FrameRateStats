@@ -1,0 +1,6 @@
+## Interface: 120005, 120001, 50503, 38001, 20505, 11508
+## Title: Frame Rate Stats
+## Version: @project-version@
+## Author: plusmouse
+
+Main.lua

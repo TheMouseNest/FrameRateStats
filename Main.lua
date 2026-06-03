@@ -43,7 +43,7 @@ local function Frames()
 end
 
 local function DeepEvents(addon)
-  print("Starting events monitoring")
+  print("Starting events monitoring for \"" .. addon .. "\"")
   local events = {}
   local f = CreateFrame("Frame")
   f:RegisterAllEvents()
@@ -52,7 +52,7 @@ local function DeepEvents(addon)
   end)
   local skip = false
   f:SetScript("OnUpdate", function()
-    if C_AddOnProfiler.GetAddOnMetric(addon, 3) > 0.3 then
+    if C_AddOnProfiler.GetAddOnMetric(addon, 3) > 0.2 then
       DevTools_Dump(events)
       print("metric", C_AddOnProfiler.GetAddOnMetric(addon, 3))
       events = {}
